@@ -1,17 +1,68 @@
 .nav {
   display: flex;
   width: 100%;
-  align-items: center;
+  align-content: center;
   justify-content: space-between;
 }
 
-.nav a {
-  gap: 10px;
-  padding: 10px;
-  margin: 12px;
-  border-radius: 4px;
+.nav_container_first_part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav a:hover {
-  background-color: #DAF7A6;
+/* este es el contenedor de la primer parte del nav*/
+
+.nav_container_first_part button {
+  cursor: pointer;
+  margin: 0 22px 0 22px;
+}
+
+.nav_container_first_part span {
+  margin: 0 10px 0 0;
+}
+
+/* fin del primer contenedor*/
+
+/* inicio contenedor 2*/
+
+.nav_container_second_part {
+  display: flex;
+  padding: 10px 10px 10px 10px;
+  align-items: center;
+}
+
+.nav_container_second_part span {
+  margin: 0 10px 0 10px;
+}
+
+.referenciaMenu {
+  display: none;
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
+
+.referenciaMenu ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  list-style: none;
+  justify-content: center;
+}
+
+.referenciaMenu li {
+  background-color: aqua;
+}
+.referenciaMenu a {
+  margin: 0 0 0 20px;
+}
+
+/* inicio de media queries*/
+
+@media (max-width: 480px) {
+  .nav_container_second_part {
+    display: none;
+  }
 }
